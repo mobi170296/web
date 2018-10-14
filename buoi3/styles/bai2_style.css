@@ -35,10 +35,11 @@ div.login-form-title{
 	color: red;
 	font-size: 14pt;
 	font-weight: bold;
-	margin-bottom: 1em;
+	padding: 5px;
 }
 div.login-form-notification{
 	text-align: center;
+	padding: 10px;
 }
 div#login-form div.login-form-info{
 	text-align: left;
@@ -117,6 +118,7 @@ div.info-content-content a{
 	display: inline-block;
 	background-color: #aaa;
 	color: #fff;
+	margin: 5px 2px;
 	padding: 5px;
 	font-size: 14pt;
 	box-shadow: 0px 0px 20px 0px #fff;
@@ -144,4 +146,14 @@ div.success-box{
 	padding: 5px 10px;
 	color: #fff;
 	font-size: 14pt;
+}
+a.btn{
+	text-decoration: none;
+	padding: 5px;
+	font-weight: bold;
+	box-shadow: 0px 0px 5px 5px #fff;
+	color: #fff;
+	background-color: #aaa;
+	margin: 10px;
+	display: inline-block;
 }

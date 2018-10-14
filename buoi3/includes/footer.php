@@ -1,9 +1,9 @@
 <?php
 	if(defined('M_RUNNING')){
 ?>
-	</div>
-	</body>
-	</html>
+</div>
+</body>
+</html>
 <?php
 	}
 ?>

@@ -1,6 +1,42 @@
 body{
 	margin: 0px;
 }
+a{
+	text-decoration: none;
+}
+div#add-product-frm div.add-product-frm-center{
+	text-align: center;
+}
+div#add-product-frm div.add-product-frm-title{
+	color: red;
+	font-size: 14pt;
+	font-weight: bold;
+	padding: 10px 0px 5px;
+}
+div#add-product-frm div.add-product-frm-notification{
+	padding: 0px 0px 10px;
+}
+div#add-product-frm div.add-product-frm-border{
+	display: inline-block;
+	border: 1px solid #aaa;
+	text-align: left;
+}
+div#add-product-frm div.add-product-frm-content{
+	background-color: #ddd;
+	margin: 10px;
+}
+div#add-product-frm table tr td{
+	padding: 10px;
+}
+div#add-product-frm table tr td:first-child{
+	padding-right: 20px;
+}
+div#add-product-frm textarea{
+	resize: vertical;
+	font-family: "tahoma";
+	font-size: 10pt;
+}
+
 div.e-center{
 	text-align: center;
 }
@@ -23,4 +59,14 @@ div.success-box{
 	padding: 5px 10px;
 	color: #fff;
 	font-size: 14pt;
+}
+a.btn{
+	text-decoration: none;
+	padding: 5px;
+	font-weight: bold;
+	box-shadow: 0px 0px 5px 5px #fff;
+	color: #fff;
+	background-color: #aaa;
+	margin: 10px;
+	display: inline-block;
 }

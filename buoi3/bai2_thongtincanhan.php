@@ -27,7 +27,7 @@
 					<div>Giới tính: <?php echo $user->getGioiTinh(); ?></div>
 					<div>Nghề nghiệp: <?php echo $user->getNgheNghiep(); ?></div>
 					<div>Sở thích: <?php echo $user->getSoThich(); ?></div>
-					<div class="e-center"><a href="bai2_dangxuat.php">Đăng xuất</a></div>
+					<div class="e-center" style="margin: 20px 0px;"><a href="bai3_themsanpham.php">Thêm sản phẩm</a><a href="bai4_danhsachsanpham.php">Danh sách sản phẩm</a><a href="bai2_dangxuat.php">Đăng xuất</a></div>
 				</div>
 			</div>
 		</div>

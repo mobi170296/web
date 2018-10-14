@@ -23,10 +23,7 @@
 				if($result){
 					if($result->num_rows){
 						$product = $result->fetch_assoc();
-						foreach($product as $p => $v){
-							$this->$p = $v;
-						}
-						#return true
+						return new ProductInfo($product['idsp'], $product['tensp'], $product['chitietsp'], $product['giasp'], $product['hinhanhsp'], $product['idtv']);
 					}else{
 						throw new ProductNotFoundException('Không tìm thấy sản phẩm');
 					}
@@ -54,6 +51,36 @@
 			}
 			public function getIDThanhVien(){
 				return $this->idtv;
+			}
+			public function addProduct($productinfo, $srcfile, $destfile){
+				$result = $this->dbcon->query('START TRANSACTION READ WRITE');
+				if(!$result){
+					throw new DBException($this->dbcon->error);
+				}
+				
+				$result = $this->dbcon->query("INSERT INTO sanpham(idsp, tensp, chitietsp, giasp, hinhanhsp, idtv) VALUES(null, '{$this->dbcon->real_escape_string(htmlspecialchars($productinfo->tensp))}', '{$this->dbcon->real_escape_string(htmlspecialchars($productinfo->chitietsp))}', {$productinfo->giasp}, '', {$productinfo->idtv})");
+				if(!$result){
+					$error = $this->dbcon->error;
+					$this->dbcon->query('rollback');
+					throw new DBException($error);
+				}
+				
+				$idsp = $this->dbcon->insert_id;
+				
+				$filename = $idsp.'.'.UploadedFile::getExtension(UploadedFile::getMimeType($srcfile));
+				
+				$result = $this->dbcon->query("UPDATE sanpham SET hinhanhsp='{$filename}' WHERE idsp=".$idsp);
+				if(!$result){
+					$error = $this->dbcon->error;
+					$this->dbcon->query('rollback');
+					throw new DBException($error);
+				}
+				
+				if(move_uploaded_file($srcfile, dirname($destfile).'/'.$filename)){
+					$this->dbcon->query('commit');
+				}else{
+					$this->dbcon->query('rollback');
+				}
 			}
 			public function editProduct($idsp, $newinfo, $src=null, $dest=null){
 				$newinfo->tensp = $this->dbcon->real_escape_string($newinfo->tensp);
@@ -111,6 +138,21 @@
 				}else{
 					$this->dbcon->query('rollback');
 					throw new \Exception('Đã xảy ra lỗi trong lúc xóa sản phẩm');
+				}
+			}
+			public function getProducts($userid){
+				$result = $this->dbcon->query('SELECT * FROM sanpham WHERE idtv='.$userid);
+				if(!$result){
+					throw new DBException($this->dbcon->error);
+				}
+				
+				if($result->num_rows){
+					while($product = $result->fetch_assoc()){
+						$products[] = new ProductInfo($product['idsp'], $product['tensp'], $product['chitietsp'], $product['giasp'], $product['hinhanhsp'], $product['idtv']);
+					}
+					return $products;
+				}else{
+					throw new ProductNotFoundException('Bạn chưa có sản phẩm nào');
 				}
 			}
 		}
