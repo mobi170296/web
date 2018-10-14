@@ -1,0 +1,26 @@
+body{
+	margin: 0px;
+}
+div.e-center{
+	text-align: center;
+}
+
+div.error-box{
+	border: 1px solid #f00;
+	background-color: #e5686a;
+	border-radius: 5px;
+	margin: 5px;
+	padding: 5px 10px;
+	color: #fff;
+	font-size: 14pt;
+}
+
+div.success-box{
+	border: 1px solid #689d1b;
+	background-color: #7eb62e;
+	border-radius: 5px;
+	margin: 5px;
+	padding: 5px 10px;
+	color: #fff;
+	font-size: 14pt;
+}

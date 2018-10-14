@@ -1,0 +1,91 @@
+@font-face{
+    font-family: 'broadway';
+    src: url('BROADW.TTF');
+}
+body{
+	margin: 0px;
+	background-color: #808080;
+}
+h1, h2, h3, h4, h5, h6{
+	margin: 0px;
+}
+div#wrap{
+	margin: 0px auto;
+	padding: 10px;
+	width: 800px;
+	background-color: #3b7565;
+	
+}
+div#title{
+	height: 150px;
+	background: url('banner.jpg');
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-size: cover;
+}
+div#title h1{
+	color: #ff0;
+	text-shadow: 2px 2px 0px #000;
+	font: 32pt broadway;
+	text-align: center;
+	padding: 30px 0px;
+}
+div#menu{
+	overflow: visible;
+}
+div#menu a{
+	text-decoration: none;
+	display: block;
+	text-align: center;
+	border: 1px dotted #ff0;
+	background-color: #222;
+	color: #ff0;
+	padding: 3px;
+}
+div#menu ul{
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+}
+div#menu > ul > li{
+	float: left;
+	box-sizing: border-box;
+	position: relative;
+}
+div#menu > ul > li > a{
+	width: 200px;
+	box-sizing: border-box;
+}
+div#menu > ul > li > ul{
+	width: 150px;
+	position: absolute;
+	display: none;
+}
+div#menu > ul > li:hover > ul{
+	display: block;
+}
+div#menu > ul > li > ul > li > a:hover{
+	background-color: #d3d3d3;
+	color: #000;
+}
+div#content{
+	clear: both;
+	padding: 10px;
+}
+div#content h4{
+	color: #ff0;
+	display: inline;
+	font-size: 14pt;
+	font-weight: normal;
+	border-bottom: 2px dotted #ff0;
+}
+div#content p{
+	margin: 5px 0px 10px;
+}
+div#content a{
+	color: #fff;
+}
+div#footer{
+	text-align: center;
+	border-top: 2px dotted #000;
+}

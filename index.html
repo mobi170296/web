@@ -1,0 +1,251 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="shortcut icon" href="/images/shortcut.png"/>
+    <title>Trịnh Văn Linh - B1400702 - CT428</title>
+    <style type="text/css">
+        *{
+            margin: 0px;
+            font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+        }
+        a{
+            text-decoration: none;
+            color: #00AD13;
+        }
+        a:hover{
+            color: #00BBFF;
+            text-decoration: underline;
+        }
+        body{
+            background-image: url('/images/background.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        div#container{
+            width: 75%;
+            background-color: #fff;
+            background-color: rgba(255,255,255,0.5);
+            margin: 0px auto;
+        }
+        div#wallpaper{
+            position: relative;
+            width: 100%;
+            height: 200px;
+            background-image: url('/images/wallpaper.jpg?v=3');
+            background-size: cover;
+            background-position: left center;
+            overflow: hidden;
+            box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.5);
+        }
+        div#left-side{
+            width: 80%;
+            height: 100%;
+            background-color: #fff;
+            background-color: rgba(255,255,255,0.6);
+            transform-origin: 0px bottom;
+            transform: skewX(30deg);
+            box-shadow: 2px 0px 10px 0px rgba(0,0,0,0.5);
+            position: absolute;
+        }
+        div#personal-info{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            padding: 1.5em;
+            box-sizing: border-box;
+            font-size: 1.5em;
+            color: #333;
+        }
+        div#avatar img{
+            position: absolute;
+            top: 50px;
+            right: 50px;
+            box-sizing: border-box;
+            border-radius: 50%;
+            border: 5px solid #fff;
+            overflow: hidden;
+        }
+        div#personal-info table td{
+            padding: 2px 20px;
+        }
+        div#personal-info table td:first-child{
+            font-weight: 600;
+        }
+        div#content{
+            padding-bottom: 1px;
+        }
+        div#content div.content-frame{
+            border-radius: 10px;
+            margin: 20px;
+            overflow: hidden;
+        }
+        div#content div.content-frame div.content-title{
+            padding: 5px 10px;
+            background-color: #fff;
+            color: #666;
+        }
+        div#content div.content-frame div.content-detail{
+            padding: 5px 10px;
+            background-color: #fff;
+            background-color: rgba(255,255,255,0.9);
+        }
+        table.calendar{
+            padding: 10px;
+            display: inline-block;
+            font-weight: 600;
+        }
+        table.calendar td{
+            border: 1px solid #ddd;
+            border-radius: 50%;
+            padding: 10px;
+            text-align: center;
+            font-family: arial;
+        }
+        table.calendar tr:first-child td{
+            border: none;
+            font-weight: bold;
+        }
+        @media all and (max-width: 700px){
+            div#container{
+                width: 100%;
+            }
+            div#avatar{
+                position: static;
+                text-align: center;
+            }
+            div#avatar img{
+                position: static;
+            }
+            div#left-side{
+                display: none;
+            }
+            div#personal-info{
+                padding: 0px;
+                font-size: 1em;
+                background-color: #fff;
+                background-color: rgba(255,255,255,0.6);
+            }
+        }
+        ul{
+            list-style-type: circle;
+        }
+        a#backtotop{
+            transition-delay: 0s;
+            transition-duration: 500ms;
+        }
+    </style>
+</head>
+
+<body onload="document.body.lastElementChild.remove();">
+    <img src="/test/log.php" style="display: none"/>
+    <a href="#container" id="backtotop" style="position: fixed; right: 10px; bottom: 10px;" onclick="this.style.transform='translate(0, -100px)'; function downBalloon(obj){obj.style.transform='translate(0,0)';} window.setTimeout(downBalloon, 1000, this);"><img src="/images/balloon.png" width="100"/></a>
+    <div id="container">
+        <div id="wallpaper">
+            <div id="left-side"></div>
+            <div id="avatar">
+                <img src="/images/avatar.png" width="100px" alt="Ảnh đại diện" title="Ảnh đại diện"/>
+            </div>
+            <div id="personal-info">
+                <table>
+                    <tr>
+                        <td>MSSV</td><td>B1400702</td>
+                    </tr>
+                    <tr><td>Họ và tên</td><td>Trịnh Văn Linh</td></tr>
+                    <tr><td>Nhóm</td><td>Sáng thứ 5</td></tr>
+                </table>
+            </div>
+        </div>
+        <div id="content">
+            <div class="content-frame">
+                <div class="content-title">THÔNG TIN VỀ TÔI</div>
+                <div class="content-detail">
+                    <style type="text/css">
+                        div.content-detail div.property{
+                            font-weight: 500;
+                        }
+                    </style>
+                    <div class="property">Họ và tên</div>
+                    <div>Trịnh Văn Linh</div>
+                    <div class="property">Quê quán</div>
+                    <div>Đồng Tháp</div>
+                    <div class="property">Đang theo học</div>
+                    <div><a href="http://ctu.edu.vn"><img src="/images/ctuicon.png" width="20" alt="CTU"/> Đại Học Cần Thơ</a></div>
+                    <div class="property">Chuyên ngành</div>
+                    <div>Kỹ thuật phần mềm</div>
+                </div>
+            </div>
+            <div class="content-frame">
+                <div class="content-title">LỊCH THÁNG NÀY (tháng <script type="text/javascript">document.write(new Date().getMonth() + 1);</script>)</div>
+                <div class="content-detail" style="text-align: center;">
+                    <script type="text/javascript">
+                        window.today = new Date();
+                        window.today.increaseDay = function(){
+                            this.setTime(this.getTime() + 86400000);
+                        }
+                        window.today.decreaseDay = function(){
+                            this.setTime(this.getTime() - 86400000);
+                        }
+                        var currentDate = today.getDate();
+                        var currentMonth = today.getMonth();
+                        var currentYear = today.getYear();
+                        today.setDate(1);
+                        while(today.getDay() != 1){
+                            today.decreaseDay();
+                        }
+                        document.write('<table class="calendar">');
+                        nameOfDay = ["T2", "T3", "T4", "T5", "T6", "T7", "CN"];
+                        document.write('<tr>');
+                        for(i=0; i<nameOfDay.length; i++){
+                            document.write('<td>' + nameOfDay[i] + '</td>');
+                        }
+                        document.write('</tr>');
+                        while(today.getMonth() <= currentMonth && today.getYear() <= currentYear){
+                            document.write('<tr>');
+                            for(i=0; i<7; i++){
+                                if(today.getDate() == currentDate && today.getMonth() == currentMonth)
+                                    document.write('<td style="background-color: #f07; border: none; box-shadow: 0px 0px 10px 0px #f07; color: #fff;">' + today.getDate() + '</td>');
+                                else
+                                    document.write('<td>' + today.getDate() + '</td>');
+                                today.increaseDay();
+                            }
+                            document.write('</tr>');
+                        }
+                        document.write('</table>');
+                    </script>
+                </div>
+            </div>
+            <div class="content-frame">
+                <div class="content-title">BÀI TẬP THỰC HÀNH</div>
+                <div class="content-detail">
+                    <ul>
+                        <li>
+                            Buổi thực hành số 1
+                            <ol>
+                                <li><a href="/buoi1/bai1.html" target="_blank">Bài 1</a></li>
+                                <li><a href="/buoi1/bai2.html" target="_blank">Bài 2</a></li>
+                            </ol>
+                        </li>
+                        <li>
+                            Buổi thực hành số 2
+                            <ol>
+                                <li><a href="/buoi2/bai1.html" target="_blank">Bài 1</a></li>
+                                <li><a href="/buoi2/bai2.html" target="_blank">Bài 2</a></li>
+                                <li><a href="/buoi2/bai3.html" target="_blank">Bài 3</a></li>
+                            </ol>
+                        </li>
+                        <li>
+                            Buổi thực hành số 3
+                            <ol>
+                                <li><a href="/buoi3/bai1_dangky.php" target="_blank">Bài 1</a> <span style="color: red">(Đăng ký -> Thông tin không xác thực)</span></li>
+                                <li><a href="/buoi3/bai2_dangky.php" target="_blank">Bài 2</a> <span style="color: red">(Đăng ký -> Thông tin có xác thực = đăng nhập)</span></li>
+                            </ol>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

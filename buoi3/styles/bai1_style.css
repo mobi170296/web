@@ -1,0 +1,109 @@
+body{
+	margin: 0px;
+}
+a{
+	text-decoration: none;
+}
+form table td{
+	padding: 10px;
+}
+form label{
+	user-select: none;
+}
+div#container{
+	
+}
+div.wrapper{
+	text-align: center;
+}
+div#register-form{
+	display: inline-block;
+	text-align: left;
+}
+div.register-form-title{
+	text-align: center;
+	color: red;
+	font-size: 14pt;
+	font-weight: bold;
+	margin-bottom: 1em;
+}
+div.register-form-notification{
+	text-align: center;
+}
+div.register-form-info{
+	border: 1px solid #aaa;
+	padding: 10px;
+}
+div#register-form table{
+	background-color: #ddd;
+	width: 100%;
+}
+div.info{
+	width: 600px;
+	margin: 0px auto;
+	border: 1px solid #f00;
+	background-color: #ddd;
+	overflow: auto;
+}
+
+div.info-header{
+	padding: 5px 0px;
+	border-bottom: 1px dotted red;
+	text-align: center;
+	color: red;
+	font-weight: bold;
+}
+
+div.info div.info-content-avatar, div.info div.info-content-content{
+	float: left;
+}
+
+div.info div.info-content-avatar{
+	box-sizing: border-box;
+	width: 30%;
+	padding: 10px;
+}
+
+div.info div.info-content-avatar img{
+	border: 2px solid #fff;
+}
+
+div.info-content-content{
+	box-sizing: border-box;
+	width: 70%;
+	padding: 5px;
+}
+
+div.info-content-content a{
+	text-decoration: none;
+	display: inline-block;
+	background-color: #aaa;
+	color: #fff;
+	padding: 5px;
+	font-size: 14pt;
+	box-shadow: 0px 0px 20px 0px #fff;
+}
+
+div.e-center{
+	text-align: center;
+}
+
+div.error-box{
+	border: 1px solid #f00;
+	background-color: #e5686a;
+	border-radius: 5px;
+	margin: 5px;
+	padding: 5px 10px;
+	color: #fff;
+	font-size: 14pt;
+}
+
+div.success-box{
+	border: 1px solid #689d1b;
+	background-color: #7eb62e;
+	border-radius: 5px;
+	margin: 5px;
+	padding: 5px 10px;
+	color: #fff;
+	font-size: 14pt;
+}

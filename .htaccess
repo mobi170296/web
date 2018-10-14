@@ -1,0 +1,11 @@
+
+# HTID:6654933: DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES BELOW
+php_value display_errors 1
+# DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES ABOVE HTID:6654933:
+
+php_value session.cookie_lifetime 2592000
+
+RewriteEngine On
+RewriteCond %{HTTPS} !on
+RewriteRule (.*) https://%{HTTP_HOST}/$1 [R,L]
+RewriteRule book/([a-z]+)/([a-z]+) /book.php?author=$1&title=$2 [PT]

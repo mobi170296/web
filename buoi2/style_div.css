@@ -1,0 +1,79 @@
+body{
+	margin: 0px;
+	background-color: #333333;
+}
+div#wrap{
+	width: 800px;
+	margin: 0px auto;
+	padding: 10px 0px;
+	background-color: #fff;
+}
+h1, h2, h3, h4, h5, h6{
+	margin: 0px;
+}
+div#title{
+	background-image: url('header.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 215px;
+	margin: 0px 10px;
+}
+div#title h1{
+	padding: 20px 15px;
+	color: #fff;
+	text-shadow: 2px 2px 3px #ff0;
+	font-size: 30pt;
+}
+
+
+div#menu{
+	float: left;
+	width: 180px;
+	box-sizing: border-box;
+	margin: 10px;
+	font: 11pt tahoma;
+}
+
+div#menu h4{
+	padding: 5px 0px;
+	text-align: center;
+	background-color: #00f;
+	color: #fff;
+}
+
+div#menu ul{
+	list-style-type: none;
+	margin: 0px;
+	background-color: #aed8e6;
+	padding: 2px 5px;
+}
+div#menu ul a{
+	display: block;
+	padding: 2px 0px;
+	text-decoration: none;
+	border-bottom: 1px solid #f6fafb;
+}
+div#menu ul a:hover{
+	background-color: #ffc0cb;
+}
+div#content{
+	float: left;
+	width: 580px;
+	box-sizing: border-box;
+	margin: 10px;
+}
+div#content h4{
+	color: #17359c;
+	font-size: 14pt;
+}
+div#content p{
+	font: 11pt tahoma;
+}
+
+div#footer{
+	clear: both;
+	margin: 10px;
+	border-top: 2px solid #cccccc;
+	font: 11pt tahoma;
+	text-align: center;
+}
