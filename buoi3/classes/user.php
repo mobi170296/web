@@ -32,7 +32,7 @@
 				}
 				if($result->num_rows){
 					$this->dbcon->query('rollback');
-					throw new ExistedUserException('Người dùng có tên đăng nhập ' . $userinfo->tendangnhap . ' đã tồn tại');
+					throw new ExistedUserException('Người dùng có tên đăng nhập ' . $userinfo->tendangnhap . ' đã tồn tại. Vui lòng chọn tên khác!');
 				}
 				$result = $this->dbcon->query("INSERT INTO thanhvien(id, tendangnhap, matkhau, hinhanh, gioitinh, nghenghiep, sothich) VALUES(null, '{$this->dbcon->real_escape_string($userinfo->tendangnhap)}', md5('{$this->dbcon->real_escape_string($userinfo->matkhau)}'), '{$this->dbcon->real_escape_string($userinfo->hinhanh)}', '{$userinfo->gioitinh}', '{$userinfo->nghenghiep}', '{$userinfo->sothich}')");
 				if(!$result){
@@ -84,7 +84,7 @@
 							$_SESSION['username'] = $username;
 							$_SESSION['password'] = $password;
 						}else{
-							throw new LoginFailedException('Đăng nhập không thành công');
+							throw new LoginFailedException('Đăng nhập không thành công, sai tài khoản hoặc mật khẩu');
 						}
 					}else{
 						throw new DBException($this->dbcon->error);

@@ -22,7 +22,7 @@
 			if(isset($_POST['username']) && is_string($_POST['username'])){
 				$username = $_POST['username'];
 				if(mb_strlen($username, 'UTF-8') > 30 || !preg_match('/^[a-z0-9A-Z]+$/', $username)){
-					$s_userdata_error['username'] = 'Tên đăng nhập không hợp lệ';
+					$s_userdata_error['username'] = 'Tên đăng nhập không hợp lệ chỉ chứa chữ cái hoặc số';
 				}
 			}else{
 				$s_userdata_error['username'] = 'Tên đăng nhập không được để trống';
