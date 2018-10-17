@@ -3,7 +3,7 @@
 ?>
 </div>
 <script type="text/javascript">
-document.onload = function(e){
+document.body.onload = function(e){
 	document.body.lastElementChild.remove();
 }
 </script>
